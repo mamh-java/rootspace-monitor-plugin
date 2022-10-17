@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>4.31</version>
+        <relativePath/>
+    </parent>
+    <artifactId>rootspace-monitor</artifactId>
+    <version>${revision}${changelist}</version>
+    <packaging>hpi</packaging>
+    <name>Monitor for root path disk space</name>
+    <description>This plugin checks the root path disk space</description>
+    <url>https://github.com/mamh-java/rootspace-monitor-plugin</url>
+
+
+    <developers>
+        <developer>
+            <id>bright.ma</id>
+            <name>bright.ma</name>
+            <email>bright.ma@blackshark.com</email>
+            <roles>
+                <role>maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+
+
+    <properties>
+        <revision>0.1</revision>
+        <changelist>-SNAPSHOT</changelist>
+        <jenkins.version>2.303.1</jenkins.version>
+        <java.level>8</java.level>
+        <hpi-plugin.version>3.35</hpi-plugin.version><!-- for this https://github.com/jenkinsci/maven-hpi-plugin/issues/303 -->
+    </properties>
+
+    <dependencies>
+
+
+    </dependencies>
+
+    <scm>
+        <connection>scm:git:https://github.com/mamh-java/rootspace-monitor-plugin.git</connection>
+        <developerConnection>scm:git:https://github.com/mamh-java/rootspace-monitor-plugin.git</developerConnection>
+        <url>https://github.com/mamh-java/rootspace-monitor-plugin</url>
+        <tag>${scmTag}</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>  
+
